@@ -54,9 +54,16 @@ const TableView = () => {
   }, []);
 
   useEffect(() => {
-    const stageLevel = data?.map((item) => item.stage).flat();
-    setStageLevel([...new Set(stageLevel)]);
+    const filterBynames = data?.map((item) => item.stage).flat();
+    setStageLevel([...new Set(filterBynames)]);
   }, []);
+
+  useEffect(() => {
+    const stageLevel = data?.map((item) => item.name).flat();
+    setFilterByname([...new Set(stageLevel)]);
+  }, []);
+
+
 
   const handleFiltercategory = (e) => {
     const keyword = e.target.value;
