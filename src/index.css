@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap');
+
+.WrapperContainer{
+  width: 80%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 1px 15px 11px #ededed;
+  border-radius: 10px;
+  padding: 10px 0px;
+
+}
+.tablerMainWrapper{
+  height: 500px;
+  overflow-x: scroll;
+}
+.tableHeader{
+  background: #ECE9FD;
+  margin: 0px;
+  padding: 10px;
+
+}
+.table{
+  padding: 0px;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0px auto;
+
+
+}
+.headerCell{
+  padding: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+  width: 200px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.tbody tr{
+  border-bottom:1px solid #ededed;
+  padding: 10px;
+}
+.tbody td{
+  padding: 10px;
+  font-size: 14px;
+}
+.SelectWrapper{
+  display: flex;
+  /* grid-template-columns: repeat(1fr ,4); */
+  justify-content: end;
+  grid-column-gap: 10px;
+  margin: 10px ;
+}
+.SelectWrapper select{
+  padding: 10px;
+  -webkit-appearance: none;
+  border-radius: 50px;
+  width: 150px;
+}
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+.filterName{
+  display: block;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.dashboardWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#chart{
+  box-shadow: 0px 2px 10px 13px #ededed;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .SelectWrapper select{
+    padding: 10px;
+    -webkit-appearance: none;
+    border-radius: 50px;
+    width: 100%;
+  }
+  .SelectWrapper {
+    display: grid;
+    justify-content: end;
+    margin: 10px;
+    grid-template-columns: 1fr;
+}
+.dashboardWrapper{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 30px;
+}
+}
+
+@media  (min-width: 768px) and (max-width: 992px) {
+  .SelectWrapper select{
+    padding: 10px;
+    -webkit-appearance: none;
+    border-radius: 50px;
+    width: 100%;
+  }
+  .SelectWrapper {
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    grid-template-columns: auto;
+}
+#chart {
+  box-shadow: 0px 2px 10px 13px #ededed;
+  width: 90%;
+  margin: 0 auto;
+  height: 250px;
+  border-radius: 10px;
+}
+.dashboardWrapper{
+   display: flex;
+   grid-template-columns: 1fr;
+   grid-gap: 30px;
+}
 }
